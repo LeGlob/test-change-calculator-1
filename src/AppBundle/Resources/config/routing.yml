@@ -1,0 +1,6 @@
+app_change:
+    path:     /automaton/{automaton}/change/{amount}
+    defaults: 
+        _controller: AppBundle:Default:change
+    requirements: {amount: \d*}
+          

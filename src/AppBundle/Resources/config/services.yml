@@ -1,0 +1,4 @@
+services:
+    
+    app.calculator_registry:
+        class: AppBundle\Registry\CalculatorRegistry
