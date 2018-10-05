@@ -1,25 +1,26 @@
 <?php
 
 declare(strict_types=1);
+
 namespace AppBundle\Calculator;
 
 use AppBundle\Model\Change;
+
 /**
- * Description of Mk1Calculator
- *
+ * Description of Mk1Calculator.
  */
-class Mk1Calculator implements CalculatorInterface 
+class Mk1Calculator implements CalculatorInterface
 {
     protected $supportedModel = 'mk1';
-    
+
     /**
      * @return string Indicates the model of automaton
      */
-    public function getSupportedModel(): string 
+    public function getSupportedModel(): string
     {
         return $this->supportedModel;
     }
-    
+
     /**
      * @param int $amount The amount of money to turn into change
      *
@@ -29,7 +30,7 @@ class Mk1Calculator implements CalculatorInterface
     {
         $change = new Change();
         $change->coin1 = $amount;
+
         return $change;
     }
-    
 }

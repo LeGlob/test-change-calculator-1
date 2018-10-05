@@ -1,4 +1,13 @@
 services:
-    
-    app.calculator_registry:
+
+    app.calculator.mk1:
+        class: AppBundle\Calculator\Mk1Calculator
+        tags: ['app.calculator']
+
+    app.calculator.mk2:
+        class: AppBundle\Calculator\Mk2Calculator
+        tags: ['app.calculator']
+
+    app.calculator.registry:
         class: AppBundle\Registry\CalculatorRegistry
+        arguments: [!tagged app.calculator]
