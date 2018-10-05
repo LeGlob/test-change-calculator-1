@@ -48,10 +48,10 @@ class Mk2Calculator implements CalculatorInterface
      * @return array|null
      */
     private function processChange(int $amount, array $changeValues, $result = array())
-{
+    {
         if ($amount === 0) {
             // Succes, Change process done
-            return $result
+            return $result;
         }
 
         $changeValue = array_shift($changeValues);
